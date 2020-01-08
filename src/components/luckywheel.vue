@@ -25,7 +25,7 @@
       <div class="main-bg"></div>
       <div class="bg-p"></div>
       <div class="content">
-        <div class="count" style="text-align: center;"> 二等奖 </div>
+        <div class="count" style="text-align: center;"> 一等奖 </div>
       </div>
       <div class="tip">
         <div class="tip-title">抽奖规则</div>
@@ -164,7 +164,7 @@ export default {
 
       // 随机获取下标
       //this.index = this.random(this.prizeList.length - 1);
-      this.index = 4;
+      this.index = 5;
       
       // 减少剩余抽奖次数
       this.count--
