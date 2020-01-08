@@ -24,6 +24,9 @@
     <div class="main">
       <div class="main-bg"></div>
       <div class="bg-p"></div>
+      <div class="content">
+        <div class="count"> 一等奖 </div>
+      </div>
       <div class="tip">
         <div class="tip-title">抽奖规则</div>
         <div class="tip-content">
