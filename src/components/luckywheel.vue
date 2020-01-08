@@ -161,7 +161,7 @@ export default {
 
       // 随机获取下标
       //this.index = this.random(this.prizeList.length - 1);
-      this.index = 4;
+      this.index = 5;
       
       // 减少剩余抽奖次数
       this.count--
