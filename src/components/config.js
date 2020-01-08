@@ -1,42 +1,42 @@
 export const prizeList = [
   {
-    icon: require("../assets/img/bean_500.png"), // 奖品图片
-    name: "奖品1", // 奖品名称
+    icon: require("../assets/img/ipad.png"), // 奖品图片
+    name: "iPad Pro", // 奖品名称
     isPrize: 1 // 该奖项是否为奖品
   },
   {
-    icon: require("../assets/img/bean_five.png"),
-    name: "奖品2",
+    icon: require("../assets/img/redenv.png"),
+    name: "神秘红包",
     isPrize: 1
   },
   {
-    icon: require("../assets/img/bean_one.png"),
-    name: "奖品3",
+    icon: require("../assets/img/travel.png"),
+    name: "欧洲游",
     isPrize: 1
   },
   {
-    icon: require("../assets/img/point_five.png"),
-    name: "奖品4",
+    icon: require("../assets/img/diamond.png"),
+    name: "钻石",
     isPrize: 1
   },
   {
-    icon: require("../assets/img/point_ten.png"),
-    name: "奖品5",
+    icon: require("../assets/img/liao.jpg"),
+    name: "撩你卡",
     isPrize: 1
   },
   {
     icon: require("../assets/img/bean_500.png"),
-    name: "奖品6",
+    name: "幸运福袋",
     isPrize: 1
   },
   {
     icon: require("../assets/img/give_up.png"),
-    name: "奖品7",
+    name: "感谢参与",
     isPrize: 0
   },
   {
     icon: require("../assets/img/bean_500.png"),
-    name: "奖品8",
+    name: "简易祝福",
     isPrize: 1
   }
 ]

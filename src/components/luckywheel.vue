@@ -25,20 +25,17 @@
       <div class="main-bg"></div>
       <div class="bg-p"></div>
       <div class="content">
-        <div class="count">今日免费抽奖次数： {{ count}}</div>
+        <div class="count">你还剩： {{ count}}  次机会哦！</div>
       </div>
       <div class="tip">
-        <div class="tip-title">活动规则</div>
+        <div class="tip-title">抽奖规则</div>
         <div class="tip-content">
-          <p>1.每日签到后，即可获得一次幸运大转盘的机会，仅限当天有效，过期作废。 2.金币抽奖，每10个金豆可兑换一次大转盘机会。</p>
-          <p>2.金币抽奖，每10个金豆可以兑换一次大转盘抽奖机会</p>
-          <p>3.所中金豆或积分到【我的账户】中查询。累计达到100金豆及以上，可以兑换相应奖品</p>
+          <marquee>感谢你对教育事业的倾情付出，中不中奖不重要，愿你每天保持好心情！</marquee>
         </div>
       </div>
     </div>
     <div class="toast" v-show="prize">
       <div class="toast-container">
-        <img :src="toastIcon" class="toast-picture" />
         <div class="close" @click="closeToast()"></div>
         <div class="toast-title">{{toastTitle}}</div>
         <div class="toast-btn">
@@ -64,7 +61,7 @@ const config = {
 export default {
   data() {
     return {
-      count: 10, // 剩余抽奖次数
+      count: 3, // 剩余抽奖次数
       duration: 3000, // 转盘旋转时间
       prizeList: [], // 奖品列表
       rotateAngle: 0, // 旋转角度
@@ -92,10 +89,27 @@ export default {
             transform: rotate(${this.rotateAngle}deg);`
     },
     toastTitle () {
+      var prizeStr = "很遗憾，没有抽中，再试一次吧！";
+      if (this.prize && this.prize.isPrize === 1)
+      {
+        prizeStr = "恭喜您，获得" + this.prize.name;
+      }
+
+      if (this.index == 2)
+      {
+        prizeStr = "恭喜您，获得梦游欧洲卡一张，限晚上10点睡着后使用。";
+      }
+      if (this.index == 4)
+      {
+        prizeStr = "恭喜您，获得瑞幸撩你卡一张。人贱人爱，花贱花开~~~";
+      }
+      if (this.index == 5)
+      {
+        prizeStr = "感谢你对教育事业的付出，幸运红包奉上。";
+      }
       return this.prize && this.prize.isPrize === 1
-        ? "恭喜您，获得" +
-            this.prize.name
-        : "未中奖";
+        ? prizeStr
+        : "很遗憾，没有抽中，再试一次吧！";
     },
     toastIcon() {
       return this.prize && this.prize.isPrize === 1
@@ -140,7 +154,8 @@ export default {
     },
     beginRotate() {
       // 添加次数校验
-      
+      if (this.isRotating) return;
+ 
       if(this.count === 0) return
 
       // 开始抽奖
@@ -149,7 +164,16 @@ export default {
 
       // 随机获取下标
       this.index = this.random(this.prizeList.length - 1);
-
+      this.index = 5;
+      if (this.count == 3) {
+        this.index = 2;
+      }
+      if (this.count == 2) {
+        this.index = 4;
+      }
+      if (this.count == 1) {
+        this.index = 5;
+      }
       // 减少剩余抽奖次数
       this.count--
   
@@ -202,6 +226,7 @@ export default {
 <style scoped>
 .container {
   width: 100%;
+  overflow: hidden;
 }
 .lucky-wheel {
   width: 100%;
@@ -345,7 +370,7 @@ export default {
   left: 50%;
   z-index: 20000;
   transform: translate(-50%, -50%);
-  width: 15.4375rem;
+  width: 19.4375rem;
   background: #fff;
   border-radius: 0.3125rem;
   padding: 0.3125rem;
@@ -421,4 +446,3 @@ export default {
   background-size: 100%;
 }
 </style>
-
