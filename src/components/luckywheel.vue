@@ -24,9 +24,6 @@
     <div class="main">
       <div class="main-bg"></div>
       <div class="bg-p"></div>
-      <div class="content">
-        <div class="count">你还剩： {{ count}}  次机会哦！</div>
-      </div>
       <div class="tip">
         <div class="tip-title">抽奖规则</div>
         <div class="tip-content">
@@ -61,7 +58,7 @@ const config = {
 export default {
   data() {
     return {
-      count: 3, // 剩余抽奖次数
+      count: 1, // 剩余抽奖次数
       duration: 3000, // 转盘旋转时间
       prizeList: [], // 奖品列表
       rotateAngle: 0, // 旋转角度
@@ -163,17 +160,9 @@ export default {
       // 可以返回下标，也可以返回奖品 id，通过查询 奖品列表，最终得到下标
 
       // 随机获取下标
-      this.index = this.random(this.prizeList.length - 1);
-      this.index = 5;
-      if (this.count == 3) {
-        this.index = 2;
-      }
-      if (this.count == 2) {
-        this.index = 4;
-      }
-      if (this.count == 1) {
-        this.index = 5;
-      }
+      //this.index = this.random(this.prizeList.length - 1);
+      this.index = 4;
+      
       // 减少剩余抽奖次数
       this.count--
   
