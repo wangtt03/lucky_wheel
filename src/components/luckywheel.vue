@@ -25,7 +25,7 @@
       <div class="main-bg"></div>
       <div class="bg-p"></div>
       <div class="content">
-        <div class="count"> 二等奖 </div>
+        <div class="count" style="text-align: center;"> 二等奖 </div>
       </div>
       <div class="tip">
         <div class="tip-title">抽奖规则</div>
@@ -320,7 +320,7 @@ export default {
   height: 5.1875rem;
   font-size: 1.125rem;
   color: #ffeb39;
-  padding-left: 6.75rem;
+  padding-left: 0rem;
 }
 .content div {
   text-align: left;
