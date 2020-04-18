@@ -1,6 +1,6 @@
 # worker_0
 
-# loss: $\color{#00FF00}{Success}$
+# loss: <font color='red'> text </font>
 
 | name | step_1 | step_2 | step_3 | step_4 | step_5 | step_6 | step_7 |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
