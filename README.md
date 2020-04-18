@@ -1,6 +1,6 @@
 # worker_0
 
-# loss: <span style="color:blue">some *blue* text</span>.
+# loss: :x:
 
 | name | step_1 | step_2 | step_3 | step_4 | step_5 | step_6 | step_7 |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
